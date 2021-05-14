@@ -1,0 +1,10 @@
+{
+  "qrdapioApp": {
+    "FormaPagamento": {
+      "null": "",
+      "CREDITO": "CREDITO",
+      "DEBITO": "DEBITO",
+      "PIX": "PIX"
+    }
+  }
+}

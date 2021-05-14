@@ -40,6 +40,8 @@
     "packageFolder": "br/com/qrdapio",
     "clientPackageManager": "npm",
     "clientThemeVariant": "",
-    "languages": ["pt-br", "en"]
+    "languages": ["pt-br", "en"],
+    "entities": ["Restaurante", "Cardapio", "ItemCardapio", "Pedido", "ItemPedido"],
+    "lastLiquibaseTimestamp": 1620947752000
   }
 }
