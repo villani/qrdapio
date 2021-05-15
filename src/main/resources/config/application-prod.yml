@@ -34,11 +34,11 @@ spring:
   # Replace by 'prod, faker' to add the faker context and have sample data loaded in production
   liquibase:
     contexts: prod
-    url: jdbc:mysql://localhost:3306/qrdapio?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
+    url: jdbc:mysql://${QRDAPIO_DB_HST}:${QRDAPIO_DB_PRT}/${QRDAPIO_DB_NME}?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
   r2dbc:
-    url: r2dbc:mysql://localhost:3306/qrdapio?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
-    username: root
-    password:
+          url: r2dbc:mysql://${QRDAPIO_DB_HST}:${QRDAPIO_DB_PRT}/${QRDAPIO_DB_NME}?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
+    username: ${QRDAPIO_DB_USR}
+    password: ${QRDAPIO_DB_PWD}
   thymeleaf:
     cache: true
 
