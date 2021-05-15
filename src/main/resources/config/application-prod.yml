@@ -76,6 +76,9 @@ server:
 # ===================================================================
 
 jhipster:
+  gateway:
+    authorized-microservices-endpoints: # Access Control Policy, if left empty for a route, all endpoints will be accessible
+      #app1: /api,/v2/api-docs # recommended dev configuration
   http:
     cache: # Used by the CachingHttpHeadersFilter
       timeToLiveInDays: 1461
