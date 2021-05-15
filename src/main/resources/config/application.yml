@@ -105,7 +105,7 @@ spring:
       client:
         provider:
           oidc:
-            issuer-uri: http://ec2-3-236-117-71.compute-1.amazonaws.com:9080/auth/realms/jhipster
+            issuer-uri: http://${QRDAPIO_HST}:9080/auth/realms/jhipster
         registration:
           oidc:
             client-id: web_app

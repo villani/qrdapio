@@ -5,9 +5,9 @@ info:
   title: 'qrdapio'
   version: 0.0.1
 servers:
-  - url: http://ec2-3-236-117-71.compute-1.amazonaws.com:8080/api
+  - url: http://${QRDAPIO_HST}:8080/api
     description: Development server
-  - url: https://ec2-3-236-117-71.compute-1.amazonaws.com:8080/api
+  - url: https://${QRDAPIO_HST}:8080/api
     description: Development server with TLS Profile
 paths: {}
 components:
@@ -25,8 +25,8 @@ components:
       description: OAuth2 authentication with KeyCloak
       flows:
         authorizationCode:
-          authorizationUrl: http://ec2-3-236-117-71.compute-1.amazonaws.com:9080/auth/realms/jhipster/protocol/openid-connect/auth
-          tokenUrl: http://ec2-3-236-117-71.compute-1.amazonaws.com:9080/auth/realms/jhipster/protocol/openid-connect/token
+          authorizationUrl: http://${QRDAPIO_HST}:9080/auth/realms/jhipster/protocol/openid-connect/auth
+          tokenUrl: http://${QRDAPIO_HST}:9080/auth/realms/jhipster/protocol/openid-connect/token
           scopes:
             jhipster: Jhipster specific claims
             email: Email claims
@@ -34,7 +34,7 @@ components:
     openId:
       type: openIdConnect
       description: OpenID Connect authentication with KeyCloak
-      openIdConnectUrl: http://ec2-3-236-117-71.compute-1.amazonaws.com:9080/auth/realms/jhipster/.well-known/openid-configuration
+      openIdConnectUrl: http://${QRDAPIO_HST}:9080/auth/realms/jhipster/.well-known/openid-configuration
 security:
   - oauth: [jhipster, email, profile]
   - openId: [jhipster, email, profile]
